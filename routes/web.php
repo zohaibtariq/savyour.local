@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\SocialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('login/{provider}', 'Auth\SocialController@redirectToProvider')->name('social.login');
+Route::get('login/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
 
 Route::get('/', function () {
     return view('welcome');

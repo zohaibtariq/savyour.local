@@ -58,4 +58,14 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function getSocialAttribute($value)
+    {
+        return json_decode($value);
+    }
+
+    public function identities() {
+       return $this->hasMany('App\Models\SocialIdentity');
+    }
+
 }
