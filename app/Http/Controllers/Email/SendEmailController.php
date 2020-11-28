@@ -11,7 +11,7 @@ class SendEmailController extends Controller
     public function sendEmailToUsers()
     {
     	$this->dispatchEmailToUsers();
-		dd('Email send to all users via queue jobs.');
+    	return view('emails.queued-success');
     }
 
     public function dispatchEmailToUsers()
