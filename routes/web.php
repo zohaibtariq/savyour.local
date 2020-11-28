@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\SocialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +13,6 @@ use App\Http\Controllers\Auth\SocialController;
 |
 */
 
-Route::get('login/{provider}', 'Auth\SocialController@redirectToProvider')->name('social.login');
-Route::get('login/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,3 +20,26 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
+
+/*
+|--------------------------------------------------------------------------
+| Social Routes
+|--------------------------------------------------------------------------
+|
+| Social Login and Registeration Route
+|
+*/
+
+Route::get('login/{provider}', 'Auth\SocialController@redirectToProvider')->name('social.login');
+Route::get('login/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
+
+/*
+|--------------------------------------------------------------------------
+| Email Route
+|--------------------------------------------------------------------------
+|
+| Send test email to all users
+|
+*/
+
+Route::get('send-email-to-all-users', 'Email\SendEmailController@sendEmailToUsers');
