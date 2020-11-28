@@ -25,16 +25,26 @@
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
             </div>
 
-            <div class="mt-4">
-                <a class="items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 w-full text-center block" href="{{ route('social.login', 'facebook') }}">{{ __('Login with Facebook') }}</a>
-            </div>
-
-            <div class="mt-4">
-                <a class="items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 w-full text-center block" href="{{ route('social.login', 'twitter') }}">{{ __('Login with Twitter') }}</a>
-            </div>
-
-            <div class="mt-4">
-                <a class="items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 w-full text-center block" href="{{ route('social.login', 'github') }}">{{ __('Login with Github') }}</a>
+            <div class="mt-4 social-login-icons">
+                <a href="{{ route('social.login', 'facebook') }}" class="btn btn-social-icon btn-facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="{{ route('social.login', 'twitter') }}" class="btn btn-social-icon btn-twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="{{ route('social.login', 'google') }}" class="btn btn-social-icon btn-google-plus">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                <!-- linkedin is under review -->
+<!--                 <a href="{{ route('social.login', 'linkedin') }}" class="btn btn-social-icon btn-linkedin">
+                    <i class="fa fa-linkedin"></i>
+                </a> -->
+                <a href="{{ route('social.login', 'github') }}" class="btn btn-social-icon btn-github">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="{{ route('social.login', 'bitbucket') }}" class="btn btn-social-icon btn-bitbucket">
+                    <i class="fa fa-bitbucket"></i>
+                </a>
             </div>
 
             <div class="block mt-4">
