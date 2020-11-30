@@ -29,7 +29,6 @@ class SocialController extends Controller
         return redirect(config('fortify.home'));
     }
 
-
     public function findOrCreateUser($providerUser, $provider) {
         $account = SocialIdentity::whereProviderName($provider)
         ->whereProviderId($providerUser->getId())

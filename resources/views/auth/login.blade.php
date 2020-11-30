@@ -35,15 +35,8 @@
                 <a href="{{ route('social.login', 'google') }}" class="btn btn-social-icon btn-google-plus">
                     <i class="fa fa-google-plus"></i>
                 </a>
-                <!-- linkedin is under review -->
-<!--                 <a href="{{ route('social.login', 'linkedin') }}" class="btn btn-social-icon btn-linkedin">
-                    <i class="fa fa-linkedin"></i>
-                </a> -->
                 <a href="{{ route('social.login', 'github') }}" class="btn btn-social-icon btn-github">
                     <i class="fa fa-github"></i>
-                </a>
-                <a href="{{ route('social.login', 'bitbucket') }}" class="btn btn-social-icon btn-bitbucket">
-                    <i class="fa fa-bitbucket"></i>
                 </a>
             </div>
 
